@@ -1,0 +1,676 @@
+{
+	"info": {
+		"name": "OpenMaker1.3",
+		"_postman_id": "d5ec8298-8a1d-8750-e215-bd36784d37a6",
+		"description": "Watchtower API v1.3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Staging",
+			"description": "",
+			"item": [
+				{
+					"name": "get_topics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://138.68.92.181:8484/api/v1.3/get_topics",
+							"protocol": "http",
+							"host": [
+								"138",
+								"68",
+								"92",
+								"181"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_topics"
+							]
+						},
+						"description": "Get topics from the Watchtower.\nParams:\n?keywords={keywords} (optional)"
+					},
+					"response": []
+				},
+				{
+					"name": "get_audiences",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://138.68.92.181:8484/api/v1.3/get_audience_sample?topic_id=31&location=italy&cursor=0",
+							"protocol": "http",
+							"host": [
+								"138",
+								"68",
+								"92",
+								"181"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_audience_sample"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "location",
+									"value": "italy",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List a sample audience for the given topic and location Watchtower.\nParams:\n/get_audience_sample?topic_id={topic_id}&location={location}&cursor={cursor}\n\nLocations\nitaly slovakia spain UK\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "get_influencers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://138.68.92.181:8484/api/v1.3/get_local_influencers?topic_id=31&location=italy&cursor=0",
+							"protocol": "http",
+							"host": [
+								"138",
+								"68",
+								"92",
+								"181"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_local_influencers"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "location",
+									"value": "italy",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List the local influencers for the given topic and location from Watchtower.\n\nParams:\nGET/get_local_influencers?topic_id={topic_id}&location={location}&cursor={cursor}\n\nLocations:\nitaly slovakia spain UK\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "get_news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://138.68.92.181:8484/api/v1.3/get_news?topic_ids=31&date=yesterday&cursor=0",
+							"protocol": "http",
+							"host": [
+								"138",
+								"68",
+								"92",
+								"181"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_news"
+							],
+							"query": [
+								{
+									"key": "topic_ids",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "yesterday",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List All News of given topic from Watchtower.\n\nParams:\n/get_news?topic_ids={topic_ids}&date={date}&cursor={cursor}\n\nDate:\nyesterday week month\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "search_news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://138.68.92.181:8484/api/v1.3/search_news?topic_ids=31&keywords=python&cursor=0&since=01-11-2017",
+							"protocol": "http",
+							"host": [
+								"138",
+								"68",
+								"92",
+								"181"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"search_news"
+							],
+							"query": [
+								{
+									"key": "topic_ids",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "keywords",
+									"value": "python",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								},
+								{
+									"key": "since",
+									"value": "01-11-2017",
+									"equals": true
+								}
+							]
+						},
+						"description": "List All News of given filter from Watchtower.\n\nParams:\nGET/search_news?topic_ids={topic_ids}&news_ids={news_ids}&keywords={keywords}&cursor={cursor}&language={language}&since={since}&until={until}&mention_language={mention_language}&mention_location={mention_location}\n\nDefault cursor 0\n\nLanguage code of the returned news (en, tr, it…)\n\nSince / Until DD-MM-YYYY"
+					},
+					"response": []
+				},
+				{
+					"name": "get_events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://138.68.92.181:8484/api/v1.3/get_events?topic_id=31&location=italy&cursor=0",
+							"protocol": "http",
+							"host": [
+								"138",
+								"68",
+								"92",
+								"181"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_events"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "location",
+									"value": "italy",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List all future events for the given topic from Watchtower.\n\nParams:\nGET/get_events?topic_id={topic_id}&sortedBy={sortedBy}&location={location}&cursor={cursor}\n\nLocations:\nitaly slovakia spain UK\n\nSortedBy e.g interested\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "get_conversations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://138.68.92.181:8484/api/v1.3/get_conversations?topic_id=31&date=month&cursor=0",
+							"protocol": "http",
+							"host": [
+								"138",
+								"68",
+								"92",
+								"181"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_conversations"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "month",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List All Conversation of given topic from Watchtower.\n\nParams:\n/get_conversations?topic_id={topic_id}&date={date}&cursor={cursor}\n\nDate:\nyesterday week month\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "get_hashtags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://138.68.92.181:8484/api/v1.3/get_hashtags?topic_id=31&date=yesterday",
+							"protocol": "http",
+							"host": [
+								"138",
+								"68",
+								"92",
+								"181"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_hashtags"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "yesterday",
+									"equals": true
+								}
+							]
+						},
+						"description": "List All Hashtags of given topic from Watchtower.\n\nParams:\n/get_hashtags?topic_id={topic_id}&date={date}\n\nDate:\nyesterday week month\n\n\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Production",
+			"description": "",
+			"item": [
+				{
+					"name": "get_topics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_topics",
+							"protocol": "http",
+							"host": [
+								"194",
+								"116",
+								"76",
+								"78"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_topics"
+							]
+						},
+						"description": "Get topics from the Watchtower.\nParams:\n?keywords={keywords} (optional)"
+					},
+					"response": []
+				},
+				{
+					"name": "get_audiences",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_audience_sample?topic_id=31&location=italy&cursor=0",
+							"protocol": "http",
+							"host": [
+								"194",
+								"116",
+								"76",
+								"78"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_audience_sample"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "location",
+									"value": "italy",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List a sample audience for the given topic and location Watchtower.\nParams:\n/get_audience_sample?topic_id={topic_id}&location={location}&cursor={cursor}\n\nLocations\nitaly slovakia spain UK\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "get_influencers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_local_influencers?topic_id=31&location=italy&cursor=0",
+							"protocol": "http",
+							"host": [
+								"194",
+								"116",
+								"76",
+								"78"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_local_influencers"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "location",
+									"value": "italy",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List the local influencers for the given topic and location from Watchtower.\n\nParams:\nGET/get_local_influencers?topic_id={topic_id}&location={location}&cursor={cursor}\n\nLocations:\nitaly slovakia spain UK\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "get_news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_news?topic_ids=31&date=yesterday&cursor=0",
+							"protocol": "http",
+							"host": [
+								"194",
+								"116",
+								"76",
+								"78"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_news"
+							],
+							"query": [
+								{
+									"key": "topic_ids",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "yesterday",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List All News of given topic from Watchtower.\n\nParams:\n/get_news?topic_ids={topic_ids}&date={date}&cursor={cursor}\n\nDate:\nyesterday week month\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "search_news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://194.116.76.78:8484/api/v1.3/search_news?topic_ids=31&keywords=python&cursor=0&since=01-11-2017",
+							"protocol": "http",
+							"host": [
+								"194",
+								"116",
+								"76",
+								"78"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"search_news"
+							],
+							"query": [
+								{
+									"key": "topic_ids",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "keywords",
+									"value": "python",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								},
+								{
+									"key": "since",
+									"value": "01-11-2017",
+									"equals": true
+								}
+							]
+						},
+						"description": "List All News of given filter from Watchtower.\n\nParams:\nGET/search_news?topic_ids={topic_ids}&news_ids={news_ids}&keywords={keywords}&cursor={cursor}&language={language}&since={since}&until={until}&mention_language={mention_language}&mention_location={mention_location}\n\nDefault cursor 0\n\nLanguage code of the returned news (en, tr, it…)\n\nSince / Until DD-MM-YYYY"
+					},
+					"response": []
+				},
+				{
+					"name": "get_events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_events?topic_id=31&location=italy&cursor=0",
+							"protocol": "http",
+							"host": [
+								"194",
+								"116",
+								"76",
+								"78"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_events"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "location",
+									"value": "italy",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List all future events for the given topic from Watchtower.\n\nParams:\nGET/get_events?topic_id={topic_id}&sortedBy={sortedBy}&location={location}&cursor={cursor}\n\nLocations:\nitaly slovakia spain UK\n\nSortedBy e.g interested\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "get_conversations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_conversations?topic_id=31&date=month&cursor=0",
+							"protocol": "http",
+							"host": [
+								"194",
+								"116",
+								"76",
+								"78"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_conversations"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "month",
+									"equals": true
+								},
+								{
+									"key": "cursor",
+									"value": "0",
+									"equals": true
+								}
+							]
+						},
+						"description": "List All Conversation of given topic from Watchtower.\n\nParams:\n/get_conversations?topic_id={topic_id}&date={date}&cursor={cursor}\n\nDate:\nyesterday week month\n\nCursor default 0"
+					},
+					"response": []
+				},
+				{
+					"name": "get_hashtags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_hashtags?topic_id=31&date=yesterday",
+							"protocol": "http",
+							"host": [
+								"194",
+								"116",
+								"76",
+								"78"
+							],
+							"port": "8484",
+							"path": [
+								"api",
+								"v1.3",
+								"get_hashtags"
+							],
+							"query": [
+								{
+									"key": "topic_id",
+									"value": "31",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "yesterday",
+									"equals": true
+								}
+							]
+						},
+						"description": "List All Hashtags of given topic from Watchtower.\n\nParams:\n/get_hashtags?topic_id={topic_id}&date={date}\n\nDate:\nyesterday week month\n\n\n"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
