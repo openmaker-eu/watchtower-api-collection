@@ -376,7 +376,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://194.116.76.78:8484/api/v1.3/get_audience_sample?topic_id=31&location=italy&cursor=0",
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_audience_sample?topic_id=2&location=italy&cursor=0",
 							"protocol": "http",
 							"host": [
 								"194",
@@ -393,7 +393,7 @@
 							"query": [
 								{
 									"key": "topic_id",
-									"value": "31",
+									"value": "2",
 									"equals": true
 								},
 								{
@@ -419,7 +419,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://194.116.76.78:8484/api/v1.3/get_local_influencers?topic_id=31&location=italy&cursor=0",
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_local_influencers?topic_id=2&location=italy&cursor=0",
 							"protocol": "http",
 							"host": [
 								"194",
@@ -436,7 +436,7 @@
 							"query": [
 								{
 									"key": "topic_id",
-									"value": "31",
+									"value": "2",
 									"equals": true
 								},
 								{
@@ -462,7 +462,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://194.116.76.78:8484/api/v1.3/get_news?topic_ids=31&date=yesterday&cursor=0",
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_news?topic_ids=2&date=yesterday&cursor=0",
 							"protocol": "http",
 							"host": [
 								"194",
@@ -479,7 +479,7 @@
 							"query": [
 								{
 									"key": "topic_ids",
-									"value": "31",
+									"value": "2",
 									"equals": true
 								},
 								{
@@ -505,7 +505,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://194.116.76.78:8484/api/v1.3/search_news?topic_ids=31&keywords=python&cursor=0&since=01-11-2017",
+							"raw": "http://194.116.76.78:8484/api/v1.3/search_news?topic_ids=2&keywords=python&cursor=0&since=01-11-2017",
 							"protocol": "http",
 							"host": [
 								"194",
@@ -522,7 +522,7 @@
 							"query": [
 								{
 									"key": "topic_ids",
-									"value": "31",
+									"value": "2",
 									"equals": true
 								},
 								{
@@ -553,7 +553,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://194.116.76.78:8484/api/v1.3/get_events?topic_id=31&location=italy&cursor=0",
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_events?topic_id=2&location=italy&cursor=0",
 							"protocol": "http",
 							"host": [
 								"194",
@@ -570,7 +570,7 @@
 							"query": [
 								{
 									"key": "topic_id",
-									"value": "31",
+									"value": "2",
 									"equals": true
 								},
 								{
@@ -596,7 +596,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://194.116.76.78:8484/api/v1.3/get_conversations?topic_id=31&date=month&cursor=0",
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_conversations?topic_id=2&date=month&cursor=0",
 							"protocol": "http",
 							"host": [
 								"194",
@@ -613,7 +613,7 @@
 							"query": [
 								{
 									"key": "topic_id",
-									"value": "31",
+									"value": "2",
 									"equals": true
 								},
 								{
@@ -639,7 +639,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://194.116.76.78:8484/api/v1.3/get_hashtags?topic_id=31&date=yesterday",
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_hashtags?topic_id=2&date=yesterday",
 							"protocol": "http",
 							"host": [
 								"194",
@@ -656,7 +656,7 @@
 							"query": [
 								{
 									"key": "topic_id",
-									"value": "31",
+									"value": "2",
 									"equals": true
 								},
 								{
