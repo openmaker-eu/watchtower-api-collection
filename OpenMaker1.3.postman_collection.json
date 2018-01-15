@@ -220,7 +220,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://138.68.92.181:8484/api/v1.3/get_events?topic_id=31&location=italy&cursor=0",
+							"raw": "http://138.68.92.181:8484/api/v1.3/get_events?topic_id=31&location=it&cursor=0",
 							"protocol": "http",
 							"host": [
 								"138",
@@ -242,7 +242,7 @@
 								},
 								{
 									"key": "location",
-									"value": "italy",
+									"value": "it",
 									"equals": true
 								},
 								{
@@ -553,7 +553,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://194.116.76.78:8484/api/v1.3/get_events?topic_id=2&location=italy&cursor=0",
+							"raw": "http://194.116.76.78:8484/api/v1.3/get_events?topic_id=2&location=it&cursor=0",
 							"protocol": "http",
 							"host": [
 								"194",
@@ -575,7 +575,7 @@
 								},
 								{
 									"key": "location",
-									"value": "italy",
+									"value": "it",
 									"equals": true
 								},
 								{
